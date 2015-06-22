@@ -7,17 +7,17 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>D4E56B0C-A105-4D29-B9FD-C2A449474FAC</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>VirgoWeather</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>587D6341A724061E743437E7C0FFC8F1C1361D50</key>
+		<key>6813ABD8E6A8C771D4ADA8F6E077C4EE7B7A38CB</key>
 		<string>https://github.com/Safian/VirgoWeather</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>VirgoWeather.xcodeproj/project.xcworkspace</string>
+	<string>VirgoWeather.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>587D6341A724061E743437E7C0FFC8F1C1361D50</key>
+		<key>6813ABD8E6A8C771D4ADA8F6E077C4EE7B7A38CB</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>587D6341A724061E743437E7C0FFC8F1C1361D50</string>
+	<string>6813ABD8E6A8C771D4ADA8F6E077C4EE7B7A38CB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>587D6341A724061E743437E7C0FFC8F1C1361D50</string>
+			<string>6813ABD8E6A8C771D4ADA8F6E077C4EE7B7A38CB</string>
 			<key>IDESourceControlWCCName</key>
 			<string>VirgoWeather</string>
 		</dict>

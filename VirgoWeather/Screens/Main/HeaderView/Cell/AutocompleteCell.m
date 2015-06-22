@@ -26,10 +26,12 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.layer.shouldRasterize = YES;
-        self.contentView.backgroundColor = [UIColor colorWithWhite:0.3 alpha:0.2];
+        self.layer.rasterizationScale = [UIScreen mainScreen].scale;
+        self.backgroundColor = [UIColor clearColor];
+        self.contentView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:0.9];
         self.contentView.layer.cornerRadius = 15;
         self.contentView.layer.borderWidth = 1;
-        self.contentView.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.9].CGColor;
+        self.contentView.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.8].CGColor;
         self.contentView.layer.masksToBounds = false;
         self.contentView.clipsToBounds = true;
     }
@@ -60,7 +62,7 @@
         frame.size.width -= frame.origin.x;
         _txtLabel = [[UILabel alloc] initWithFrame:frame];
         _txtLabel.textAlignment = NSTextAlignmentLeft;
-        _txtLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleHeight;
+        _txtLabel.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
         [self.contentView addSubview:_txtLabel];
     }
     return _txtLabel;

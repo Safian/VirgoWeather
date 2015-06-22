@@ -92,7 +92,7 @@
 #pragma mark Get url helpers
 
 
-- (void)getURL:(NSString *)urlStr
+- (void)postURL:(NSString *)urlStr
    WithSession:(NSURLSession*)session
     completion:(void (^)(NSDictionary *data,NSError *error))completionBlock
 {
@@ -121,9 +121,9 @@
 
 //Shorthand with default session
 
-- (void)getURL:(NSString *)urlStr completion:(void (^)(NSDictionary *data,NSError *error))completionBlock
+- (void)postURL:(NSString *)urlStr completion:(void (^)(NSDictionary *data,NSError *error))completionBlock
 {
-    [self getURL:urlStr  WithSession:self.defaultSession completion:completionBlock];
+    [self postURL:urlStr  WithSession:self.defaultSession completion:completionBlock];
 }
 
 #pragma mark Get Weather methods
@@ -132,7 +132,7 @@
                completion:(void (^)(NSDictionary *weatherData,NSError *error))completionBlock
 {
     NSString * urlStr =[NSString stringWithFormat:OpenWeather_CityID_URL,cityID];
-    [self getURL:urlStr completion:completionBlock];
+    [self postURL:urlStr completion:completionBlock];
     NSLog(@"GetWeatherWih CityID URL :%@\n", urlStr);
 }
 
@@ -142,7 +142,7 @@
                    completion:(void (^)(NSDictionary *weatherData,NSError *error))completionBlock
 {
     NSString * urlStr =[NSString stringWithFormat:OpenWeather_Location_URL,latitude,longitude];
-    [self getURL:urlStr completion:completionBlock];
+    [self postURL:urlStr completion:completionBlock];
     NSLog(@"GetWeatherWith Location URL :%@\n", urlStr);
 }
 
@@ -154,7 +154,7 @@
     [_searchSession invalidateAndCancel];
     _searchSession = nil;
     NSString * urlStr =[NSString stringWithFormat:OpenWeather_CitySearch_URL,citySubString];
-    [self getURL:urlStr  WithSession:self.searchSession completion:completionBlock];;
+    [self postURL:urlStr  WithSession:self.searchSession completion:completionBlock];;
     NSLog(@"Get City with Search String: %@ URL :%@\n", citySubString,urlStr);
 }
 

@@ -16,7 +16,8 @@
 #define OpenWeather_Location_URL    @"http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&units=metric"
 #define OpenWeather_IconImage_URL   @"http://openweathermap.org/img/w/%@.png"
 
-#define DefaultHeader   @{@"Accept": @"application/json", @"x-api-key": OpenWeather_API_KEY}
+#define DefaultHeader   @{@"Content-Type": @"application/json; charset=utf-8", \
+                          @"x-api-key": OpenWeather_API_KEY}
 
 @interface OpenWeatherManager ()
 
@@ -95,7 +96,11 @@
    WithSession:(NSURLSession*)session
     completion:(void (^)(NSDictionary *data,NSError *error))completionBlock
 {
-   [[session dataTaskWithURL:[NSURL URLWithString:urlStr]
+    NSURL *url = [[NSURL alloc]initWithString:urlStr];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    
+   [[session dataTaskWithRequest:request
            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
     {
         NSLog(@"Response:%@ %@\n", response, error);

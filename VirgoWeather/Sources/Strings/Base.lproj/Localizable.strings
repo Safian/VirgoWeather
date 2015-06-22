@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  VirgoWeather
+
+  Created by Sáfián Szabolcs on 19/06/15.
+  Copyright (c) 2015 Safian. All rights reserved.
+*/
+
+"main_title" = "Időjárás app";
+
+"search_city_placeholder"       = "Város neve";
+"search_city_done_button_title" = "Adatlekérés";
+
+"search_text_not_found"         = "Nem adott meg városnevet!";
+"search_city_not_found_title"  = "Város nem található";
+"search_city_not_found_message" = "Helytelen városnév vagy nem található a városban meteoroloógiai állomás.\nPontosítsa a nevet vagy adja meg egy közeli nagyváros nevét.";

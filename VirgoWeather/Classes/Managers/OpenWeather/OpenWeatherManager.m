@@ -98,8 +98,8 @@
 {
     NSURL *url = [[NSURL alloc]initWithString:urlStr];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-    
+    request.allHTTPHeaderFields = DefaultHeader;
+    request.HTTPMethod = @"POST";
    [[session dataTaskWithRequest:request
            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
     {
